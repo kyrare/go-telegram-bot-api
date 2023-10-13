@@ -41,7 +41,6 @@ func (bot *Bot) request(endpoint string, params RequestParams) (ApiResponse, err
 	req, err := http.NewRequest("POST", requestUrl, strings.NewReader(values.Encode()))
 
 	if err != nil {
-		panic(err)
 		return ApiResponse{}, err
 	}
 
@@ -50,7 +49,6 @@ func (bot *Bot) request(endpoint string, params RequestParams) (ApiResponse, err
 	resp, err := http.DefaultClient.Do(req)
 
 	if err != nil {
-		panic(err)
 		return ApiResponse{}, nil
 	}
 
