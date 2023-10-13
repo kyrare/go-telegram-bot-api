@@ -1,4 +1,4 @@
-package main
+package bot
 
 type Event struct {
 	checker func(update Update) bool
